@@ -13,7 +13,7 @@ beforeEach(() => {
 
 test('check ease add', () => {
   cart.add('1');
-  expect(cart.basket).toStrictEqual({ '1': 1 });
+  expect(cart.basket).toStrictEqual({ '1': 1234 });
 });
 
 test('check fake name', () => {
@@ -30,7 +30,7 @@ test('check 3 times', () => {
   cart.add('1');
   cart.add('1');
   cart.add('1');
-  expect(cart.basket).toStrictEqual({ '1': 3 });
+  expect(cart.basket).toStrictEqual({ '1': 3234 });
 });
 
 test('check test all plants', () => {

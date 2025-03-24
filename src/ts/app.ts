@@ -10,7 +10,7 @@ class App {
     App.router = new Router(this.cart);
   }
 
-  // private setCart() {
+  private setCart() {
     const newCart = new Cart();
     const oldCartJson = localStorage.getItem('cart');
     if (oldCartJson) {
