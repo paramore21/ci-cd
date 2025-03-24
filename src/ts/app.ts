@@ -7,7 +7,7 @@ class App {
 
   constructor() {
     this.cart = this.setCart();
-    App.router = new Router(this.cart);
+    // App.router = new Router(this.cart);
   }
 
   private setCart() {
@@ -16,7 +16,7 @@ class App {
     if (oldCartJson) {
       const oldCart: Cart = JSON.parse(oldCartJson);
       oldCart.basket ? (newCart.basket = oldCart.basket) : null;
-      oldCart.activePromoCodes ? (newCart.activePromoCodes = oldCart.activePromoCodes) : null;
+      // oldCart.activePromoCodes ? (newCart.activePromoCodes = oldCart.activePromoCodes) : null;
     }
     return newCart;
   }
