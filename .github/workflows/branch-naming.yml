@@ -4,16 +4,19 @@ on:
   push:
     branches-ignore:
       - main
-  pull_request:
 
 jobs:
   validate-branch-name:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
       - name: Check branch name
         run: |
           BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          echo "Current branch: $BRANCH_NAME"
           if [[ ! "$BRANCH_NAME" =~ ^feature/ ]]; then
-            echo " Branch names must start with 'feature/'"
+            echo "ERROR: Branch names must start with 'feature/'"
             exit 1
           fi
