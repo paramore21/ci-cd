@@ -32,9 +32,9 @@
   width: 140px;
   height: 40px;
   background-color: variables.$white-medium;
-  color: variables.$green-light;
+  color: variables.$green-dark;
   border-radius: 20px;
-  border: 1px variables.$green-light solid;
+  border: 1px variables.$green-dark solid;
   transition: 0.5s;
   cursor: pointer;
   &:hover,
@@ -135,8 +135,7 @@
 
 .filter-button {
   position: absolute;
-  top: 150px;
-  right: 40px;
+  transform: translateY(150px) translateX(40px);
   width: 40px;
   height: 40px;
   border-radius: 100%;
