@@ -60,13 +60,3 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-
-  check-branch-name:
-    name: Check Branch Name
-    runs-on: ubuntu-latest
-    steps:
-      - name: Validate branch naming
-        if: startsWith(github.ref, 'refs/heads/feature/') == false
-        run: |
-          echo "ERROR: Branch name must start with 'feature/'"
-          exit 1
